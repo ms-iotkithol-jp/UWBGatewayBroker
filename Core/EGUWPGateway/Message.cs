@@ -11,9 +11,9 @@ namespace EGEdge.IoT.Gateway
         public Message(byte[] msgAsByteArray)
         {
             message = new byte[msgAsByteArray.Length];
-            msgAsByteArray.CopyTo(msgAsByteArray, 0);
+            msgAsByteArray.CopyTo(message, 0);
             this.properties = new Dictionary<string, string>();
-        }
+        }   
         public Message(Message message)
         {
             this.message = new byte[message.message.Length];
