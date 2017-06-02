@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA2B9C32-4836-47F6-B395-951650544271}</ProjectGuid>
+    <ProjectGuid>{AB3BC0BF-230F-45F1-ADF3-6307D55952F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EGUWPBroker</RootNamespace>
@@ -102,9 +102,10 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
-  <PropertyGroup>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Gateway.cs" />
     <Compile Include="MessageBus.cs" />
@@ -113,16 +114,8 @@
     <EmbeddedResource Include="Properties\EGUWPBroker.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>5.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>10.0.2</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\EGUWPGateway\EGUWPGateway.csproj">
-      <Project>{a97c5ab3-a17f-49cc-9336-dcfe98c13580}</Project>
+      <Project>{4fd22819-0a35-43d7-82c1-fcf0d75d3467}</Project>
       <Name>EGUWPGateway</Name>
     </ProjectReference>
   </ItemGroup>

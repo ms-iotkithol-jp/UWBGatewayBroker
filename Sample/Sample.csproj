@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{728BC763-77BF-45A9-938F-B81610B33D25}</ProjectGuid>
+    <ProjectGuid>{8A280337-2AFA-467E-9E4B-5B02A5D0C6A5}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sample</RootNamespace>
@@ -88,9 +88,10 @@
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
-  <PropertyGroup>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -128,29 +129,24 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>5.2.3</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Core\EGUWPBroker\EGUWPBroker.csproj">
-      <Project>{da2b9c32-4836-47f6-b395-951650544271}</Project>
+      <Project>{ab3bc0bf-230f-45f1-adf3-6307d55952f6}</Project>
       <Name>EGUWPBroker</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core\EGUWPGateway\EGUWPGateway.csproj">
-      <Project>{a97c5ab3-a17f-49cc-9336-dcfe98c13580}</Project>
+      <Project>{4fd22819-0a35-43d7-82c1-fcf0d75d3467}</Project>
       <Name>EGUWPGateway</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TestModuleA\TestModuleA.csproj">
-      <Project>{a18b5d21-1bbf-4b9c-8554-cca6cc69b323}</Project>
+      <Project>{769bf5e2-4597-4a21-b2d4-fdc51aa033a4}</Project>
       <Name>TestModuleA</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TestModuleB\TestModuleB.csproj">
-      <Project>{af7c2d68-72c7-4347-8dbf-90be91aa44a0}</Project>
+      <Project>{59d115b8-aa42-4108-9c8d-7b20de6d1d8e}</Project>
       <Name>TestModuleB</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\TestModuleC\TestModuleC.csproj">
-      <Project>{491bf415-d34a-48cc-99a2-a853eb453473}</Project>
+      <Project>{5e43a0a5-9f1b-4df4-b122-5e0f43dc512a}</Project>
       <Name>TestModuleC</Name>
     </ProjectReference>
   </ItemGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A18B5D21-1BBF-4B9C-8554-CCA6CC69B323}</ProjectGuid>
+    <ProjectGuid>{769BF5E2-4597-4A21-B2D4-FDC51AA033A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestModuleA</RootNamespace>
@@ -102,22 +102,18 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
-  <PropertyGroup>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TestModuleA.cs" />
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestModuleA.cs" />
     <EmbeddedResource Include="Properties\TestModuleA.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>5.2.3</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\EGUWPGateway\EGUWPGateway.csproj">
-      <Project>{a97c5ab3-a17f-49cc-9336-dcfe98c13580}</Project>
+      <Project>{4fd22819-0a35-43d7-82c1-fcf0d75d3467}</Project>
       <Name>EGUWPGateway</Name>
     </ProjectReference>
   </ItemGroup>

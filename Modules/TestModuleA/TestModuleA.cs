@@ -16,6 +16,7 @@ namespace TestModuleA
             Debug.WriteLine("{0}:Create called.",name);
             Debug.WriteLine(" config:{0}", Encoding.UTF8.GetString(configuration));
         }
+
         public void Start()
         {
             Debug.WriteLine("{0}:Start called.", name);

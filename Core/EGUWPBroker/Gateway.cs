@@ -81,6 +81,7 @@ namespace EGEdge.IoT.Gateway
                 }
             }
         }
+
         public void Destroy()
         {
             lock (gwModules)

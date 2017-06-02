@@ -21,7 +21,6 @@ namespace TestModuleB
         {
             Debug.WriteLine("{0}:Start called.", name);
         }
-
         public void Destroy()
         {
             Debug.WriteLine("{0}:Destory called.", name);

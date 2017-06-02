@@ -33,8 +33,6 @@ namespace Sample
             this.Suspending += OnSuspending;
         }
 
-
-
         /// <summary>
         /// アプリケーションがエンド ユーザーによって正常に起動されたときに呼び出されます。他のエントリ ポイントは、
         /// アプリケーションが特定のファイルを開くために起動されたときなどに使用されます。
@@ -74,13 +72,11 @@ namespace Sample
                 // 現在のウィンドウがアクティブであることを確認します
                 Window.Current.Activate();
             }
-
             gateway = TestSample.Test();
             gateway.Start();
         }
-
         Gateway gateway;
-        
+
         /// <summary>
         /// 特定のページへの移動が失敗したときに呼び出されます
         /// </summary>
