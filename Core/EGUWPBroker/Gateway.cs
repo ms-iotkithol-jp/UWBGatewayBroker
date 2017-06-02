@@ -68,13 +68,29 @@ namespace EGEdge.IoT.Gateway
             }
         }
 
+        public void Start()
+        {
+            lock (gwModules)
+            {
+                foreach (var name in gwModules.Keys)
+                {
+                    new Task(() =>
+                    {
+                        gwModules[name].Start();
+                    }).Start();
+                }
+            }
+        }
         public void Destroy()
         {
             lock (gwModules)
             {
-                foreach(var name in gwModules.Keys)
+                foreach (var name in gwModules.Keys)
                 {
-                    gwModules[name].Destroy();
+                    new Task(() =>
+                    {
+                        gwModules[name].Destroy();
+                    }).Start();
                 }
             }
         }

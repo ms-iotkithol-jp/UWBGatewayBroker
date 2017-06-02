@@ -17,6 +17,11 @@ namespace TestModuleB
             Debug.WriteLine(" config:{0}", Encoding.UTF8.GetString(configuration));
         }
 
+        public void Start()
+        {
+            Debug.WriteLine("{0}:Start called.", name);
+        }
+
         public void Destroy()
         {
             Debug.WriteLine("{0}:Destory called.", name);

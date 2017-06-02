@@ -9,7 +9,7 @@ namespace Sample
 {
     class TestSample
     {
-        public static void Test()
+        public static Gateway Test()
         {
             string testConfig = "{\"modules\":" +
                 " [" +
@@ -42,6 +42,7 @@ namespace Sample
 
             gateway.CreateFromJson(testConfig);
 
+            return gateway;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EGEdge.IoT.Gateway;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,6 +32,8 @@ namespace Sample
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
+
+
 
         /// <summary>
         /// アプリケーションがエンド ユーザーによって正常に起動されたときに呼び出されます。他のエントリ ポイントは、
@@ -72,9 +75,12 @@ namespace Sample
                 Window.Current.Activate();
             }
 
-            TestSample.Test();
+            gateway = TestSample.Test();
+            gateway.Start();
         }
 
+        Gateway gateway;
+        
         /// <summary>
         /// 特定のページへの移動が失敗したときに呼び出されます
         /// </summary>

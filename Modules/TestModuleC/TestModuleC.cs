@@ -18,6 +18,11 @@ namespace TestModuleC
             Debug.WriteLine("{0}:Create called.", name);
             Debug.WriteLine(" config:{0}", Encoding.UTF8.GetString(configuration));
 
+        }
+
+        public void Start()
+        {
+            Debug.WriteLine("{0}:Start called.", name);
             new Task(() =>
             {
                 string content = "Hello@" + DateTime.Now.ToString();
