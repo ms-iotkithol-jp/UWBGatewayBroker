@@ -9,6 +9,7 @@ namespace EGEdge.IoT.Gateway
     public interface IGatewayModule
     {
         void Create(Broker broker, byte[] configuration);
+        void Start();
         void Destroy();
         void Receive(Message received_message);
     }
